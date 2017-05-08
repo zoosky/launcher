@@ -25,6 +25,7 @@ object CheckProxy {
           System.setProperty(sysPort, port.toString)
         copyEnv(envUser, sysUser)
         copyEnv(envPassword, sysPassword)
+        copyEnv(env_no_proxy, sys_no_proxy)
       } catch {
         case e: MalformedURLException =>
           System.err.println(s"Warning: could not parse $envURL setting: ${e.toString}")

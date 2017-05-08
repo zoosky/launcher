@@ -101,10 +101,12 @@ private final class ProxyProperties(
   val envURL: String,
   val envUser: String,
   val envPassword: String,
+  val env_no_proxy: String,
   val sysHost: String,
   val sysPort: String,
   val sysUser: String,
-  val sysPassword: String
+  val sysPassword: String,
+  val sys_no_proxy: String
 )
 private object ProxyProperties {
   val http = apply("http")
@@ -115,9 +117,11 @@ private object ProxyProperties {
     pre + "_proxy",
     pre + "_proxy_user",
     pre + "_proxy_pass",
+    pre + ".no_proxy",
     pre + ".proxyHost",
     pre + ".proxyPort",
     pre + ".proxyUser",
-    pre + ".proxyPassword"
+    pre + ".proxyPassword",
+    pre + ".nonProxyHosts"
   )
 }
